@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { Todo_interface } from "../interfaces/Todo.interface";
+import { Todo_interface } from "../interfaces/Todo.interface"
 import Task_model from "../models/Task";
 
 // get Task
@@ -78,7 +78,7 @@ const getByStatus=async(req:Request, res:Response):Promise<void>=>{
     try {
         const status=req.params.status;
         console.log(status);
-        let searchQuery;
+        let searchQuery:boolean;
         if (status=== "completed"){
             searchQuery=true;
         }else{
